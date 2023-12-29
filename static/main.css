@@ -1,0 +1,707 @@
+body {
+    /* background-color: #e3f2fd; */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* return to top slider */
+
+.return-to-top {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 3;
+    animation: fadeIn 2s;
+    color: #505050 !important;
+    background-color: #dddddd !important;
+    border:1px solid #dddddd !important;
+    transition: 0.5s !important;
+}
+
+.return-to-top:hover {
+    background-color: black !important;
+    color: white !important;
+    /* transition: all 0.5s ease-in-out; */
+    border:1px solid black !important;
+
+    
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+html {
+    scroll-behavior:smooth
+}
+
+/* get rid of title-fornt, sids-bg */
+
+/* fonts */
+
+h1, h2, h5, h3, button, h4 {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 900 !important;
+}
+
+#about h3 {
+    /* font-family: "Montserratsemibold", sans-serif !important; */
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+h5, h4 {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+h1, h2, .page-title, h3, h4, #education h4, #education h3, #work h4, #work h3 {
+    color: white;
+}
+
+h2 {
+    font-weight: 900 !important;
+}
+
+nav li {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+#home p, #about p, #education p, #work li, #work p {
+    font-family: "Poppins", sans-serif !important;
+    color: #e1e1e1;
+    /* color: red; */
+    font-weight: 300 !important;
+    font-size: 16px;
+    list-style-type: none;
+}
+
+#about i {
+    color: #e1e1e1;
+}
+
+#skills p {
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+#skills {
+    display: flex;
+    align-items: center
+}
+
+/* backgrounds */
+
+.background-1 {
+    background-color: #202020;
+}
+
+.background-2 {
+    background-color: #2b2b2b;
+}
+
+/* navbar */
+
+/* .background-1 p {
+    color: white
+} */
+
+nav li a {
+    color: #c5c5c5;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+nav li a:focus {
+    color: #5f5f5f !important;
+}
+
+/* nav li a:hover {
+    transition: all 0.5s ease-in-out;
+} */
+
+nav button:focus {
+    outline: none;
+    box-shadow:none !important;
+    border:1px solid #5f5f5f !important;
+}
+
+/* home page */
+
+#home {
+    margin-top: 50px;
+}
+
+#home button, #about button {
+    background-color: #dddddd;
+    color: #505050;
+    font-size: 14px;
+    transition: 0.5s;
+    padding: 13px 30px;
+}
+
+#home button:hover, #about button:hover {
+    background-color: black;
+    color: white;
+}
+
+#about button {
+    margin-top: 30px;
+    padding: 13px 30px;
+}
+
+#home button {
+    margin-top: 40px;
+    padding: 13px 50px;
+}
+
+#about button:focus {
+    outline:none;
+    box-shadow: none;
+  }
+
+#home img {
+    height: 250px;
+    margin-top: 20px;
+    width: 250px
+}
+
+#home h5 {
+    margin-bottom: 0px;
+}
+
+#home h1 {
+    margin-bottom: 30px;
+}
+
+#img-1, #img-2 {
+    border: 1px solid #505050;
+}
+
+#img-1 {
+    width:300px;
+    height: 400px;
+}
+
+#img-2 {
+    width: 340px;
+    height: 360px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+    right: 20px;
+    top: 20px;
+    flex-direction: column;
+}
+
+#img-2 h6 {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.blink_me {
+    animation: blinker 3s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+.blinky {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+.left-side, .right-side {
+    border-top: 4px solid green;
+    border-bottom: 4px solid green;
+    width: 8px;
+    height: 30px;
+    margin: 0px 10px;
+}
+
+.left-side {
+    border-left: 4px solid green;
+}
+
+.right-side {
+    border-right: 4px solid #44993b;
+}
+
+.typewriter h6 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #44993b; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #44993b; }
+  }
+
+  @media only screen and (max-width: 768px) {
+    #img-2 img {
+      width: 180px;
+      height: 180px;
+    }
+
+    #img-2 h6 {
+        font-size: 14px;
+    }
+
+    #img-1 {
+        width:230px;
+        height: 330px;
+    }
+
+    #img-2 {
+        width: 270px;
+        height: 290px;
+    }
+
+    /* #home-1 {
+        height: 500px;
+    } */
+  }
+
+/* #home-1 {
+    height: 600px;
+} */
+
+
+/* containers */
+
+.title-box {
+    margin-bottom: 30px;
+}
+
+.page-title {
+    margin-bottom: 20px;
+}
+
+.containers {
+    padding: 100px 0px;
+}
+
+.container-footer {
+    padding: 30px 0px;
+    align-items: center;
+}
+
+.container-inbetween {
+    padding: 50px 0px;
+    align-items: center;
+}
+
+.line-one, .line-two {
+    background-color: #a1a1a1;
+    /* color:RED; */
+    /* background-color: green; */
+    height: 2px
+}
+
+.line-one {
+    width: 44px;
+    margin-bottom: 3px;
+}
+
+.line-two {
+    width: 77px;
+}
+
+.line-three {
+    width: 2px;
+    height: 20px;
+    background-color: #a1a1a1;
+}
+
+.line-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 3px; */
+}
+
+/* about page */
+
+#about ul {
+    list-style-type: none;
+    justify-content: center;
+    padding: 0px;
+}
+
+#about li {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #f1f1f1;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+/* projects */
+
+#projects h4 {
+    color: #979494;
+    margin-bottom: 20px;
+}
+
+#projects p, #projects small, #education small, #work small {
+    color: #737373;
+    font-family: "Poppins", sans-serif !important;
+}
+
+.project:hover {
+    text-decoration: none;
+    transition: 0.5s !important;
+}
+
+#projects .card h4, #projects .card p {
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+#projects .card:hover h4, #projects .card:hover p {
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+#projects .card {
+    border: none;
+    border-radius: 0px;
+}
+
+/* education */
+
+#education .ed-loc, #education .ed-des {
+    height: 200px;
+}
+
+@media only screen and (max-width: 992px) {
+    #education .ed-loc, #education .ed-des {
+      height: 300px;
+    }
+
+    .ed-scroll {
+        height: 280px;
+    }
+  }
+
+#education h3 {
+    word-break: break-all;
+}
+
+.ed-scroll {
+    height: 180px;
+    width: 2px;
+    border: 1px dashed #737373;
+}
+
+.ball-top, .ball-bottom {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    /* border: 2px solid #e1e1e1; */
+    background-color: #e1e1e1;
+}
+
+/* hobbies */
+
+#hobbies .card {
+    background-color: #2b2b2b;
+    border-radius: 0;
+    /* height: 450px; */
+    padding: 0px 15px;
+    margin-bottom: 30px;
+}
+
+#hobbies .card-body {
+    padding: 50px 10px 60px 10px;
+}
+
+#hobbies h6 {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 100;
+    color: #9b9b9b;
+    margin-bottom: 0px;
+}
+
+#hobbies p {
+    color: #979797;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+}
+
+#hobbies a {
+    color: #9b9b9b;
+    transition: 0.5s;
+    font-size: 12px;
+}
+
+#hobbies a:hover {
+    color: white;
+}
+
+#hobbies i {
+    color: #9b9b9b;
+    transition: 0.5s;
+    border: 1px solid #2b2b2b;
+
+}
+
+.ho-box {
+    border-radius: 50%;
+    color: #9b9b9b;
+    border: 1px solid #9b9b9b;
+    padding: 8px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+
+#hobbies .card:hover .ho-box, #hobbies .card:hover i {
+    background-color: black;
+    border: 1px solid black !important;
+    color: white;
+}
+
+.ho-box2 {
+    display: flex;
+    justify-content: center;
+}
+
+.hobby-line {
+    width: 50px;
+    background-color: #dbdbdb;
+    height: 2px;
+    margin: 15px 0px;
+}
+
+.hobby-line-co {
+    display: flex;
+    justify-content: center;
+}
+
+/* contact */
+
+#contact .line-one {
+    margin-bottom: 5px;
+}
+
+#contact .line-two {
+    margin-bottom: 20px;
+}
+
+#contact-greeting {
+    margin-bottom: 30px;
+}
+
+#contact .line-container {
+    justify-content: start;
+}
+
+#contact p {
+    color: #777777;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+#contact h6 {
+    color: #dadada;
+    font-size: 18px;
+    font-family: "Montserrat";
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+
+#contact small {
+    color: #aaaaaa;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    transition: 0.5s;
+}
+
+#contact small:hover {
+    text-decoration: none;
+    color: white;
+}
+
+#contact a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/* #contact i {
+    color: #dadada;
+    border: 1px solid #aaaaaa;
+    border-radius: 50%;
+} */
+
+
+#contact .ho-box {
+    border-radius: 50%;
+    border: 1px solid #aaaaaa;
+    padding: 8px;
+    width: 45px;
+    height: 45px;
+}
+
+#contact .ho-box2 {
+    width: 45px;
+    margin-right: 12px;
+}
+
+.contact-row {
+    padding: 0px 15px;
+}
+
+#contact i {
+    color: #dadada;
+    /* transition: 0.5s; */
+    /* border: 1px solid #2b2b2b; */
+}
+
+.contact-field {
+    background-color: #2b2b2b;
+    color: #777777;
+    border-bottom: 1px solid #777777;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 5px 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    width: 300px;
+    /* margin-left: 15px; */
+}
+
+.contact-field:focus, .contact-message:focus {
+    outline-width: 0;
+}
+
+/* Change the white to any color */
+.contact-field:-webkit-autofill{
+    -webkit-text-fill-color: #777777 ;
+    box-shadow: 0 0 0px 1000px #2b2b2b inset;
+    -webkit-box-shadow: 0 0 0px 1000px #2b2b2b inset;
+}
+
+.contact-message {
+    background-color: #2b2b2b;
+    color: #777777;
+    border: 1px solid #777777;
+    padding: 10px 20px;
+    margin: 50px 0px 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    width: 550px;
+    height: 150px;
+}
+
+@media only screen and (max-width: 992px) {
+    .contact-message {
+      width: 350px;
+    }
+  }
+
+@media only screen and (max-width: 400px) {
+    .contact-message, .contact-field {
+      width: 100%;
+    }
+  }
+
+/* #contact form {
+    padding: 0px 50px;
+} */
+
+.contact-button {
+    background-color: #393939;
+    color: #e5e5e5;
+    border-radius: 0%;
+    border: none;
+    transition: 0.5s;
+    padding: 10px 40px;
+    margin: 30px 0px 0px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+}
+
+.contact-button:hover {
+    background-color: black;
+    color: white;
+
+}
+
+/* footer */
+
+#footer p{
+    color: #929292;
+    float: left;
+    margin-bottom: 0px;
+    font-family: "Montserratlight", sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.container-footer {
+    padding: 20px 0px;
+}
+
+#footer div {
+    display: flex;
+    float: right;
+}
+
+#footer a {
+    padding: 0px 15px;
+    color: #929292;
+    font-family: "Montserratlight", sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+    margin-bottom: 0px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+#footer a:hover {
+    text-decoration: none;
+    color: white;
+
+}
+
+/* other */
+
+.anchor{
+    scroll-margin-top: -10px;
+  }
